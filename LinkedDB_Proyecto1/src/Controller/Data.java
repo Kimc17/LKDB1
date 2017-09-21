@@ -15,24 +15,37 @@ package Controller;
 		
 		
 		
-
+		/** lista que almacena todas las otras listas*/
 		public ListaDobleEnlazada Stores;
-		
+
+		/**
+		 * Constructor que inicializa la lista Stores
+		 */
 		public Data() {
 			Stores= new ListaDobleEnlazada("Stores");
 			
 		}
 
+		/**
+		 * 
+		 * @return Lista Doble Enlazada
+		 */
 		public  ListaDobleEnlazada getStores() {
 			return Stores;
 		}
-
+		/**
+		 * 
+		 * @param stores
+		 */
 		public void setStores(ListaDobleEnlazada stores) {
 			Stores = stores;
 		} 
 		
 
-		
+		/**
+		 * método que crea la carpeta que actuara como store
+		 * @param name
+		 */
 		 public void NewStore(String name) {
 		        try {
 		            File directorio = new File("Data\\" + name);
@@ -44,6 +57,10 @@ package Controller;
 		 }
 		        
 		                
+		 /**
+		  * método que añade la carpeta a la lista de Stores
+		  * @param valor
+		  */              
 
 		public  void AddStore(String valor) {
 			
@@ -59,7 +76,11 @@ package Controller;
 		}
 
 
-
+		/**
+		 * metodo que añade el documento a la lista circular de su store respectivo
+		 * @param doc
+		 * @param store
+		 */
 		private void AddDocumento(String doc, String store) {
 			if(Stores.buscar(store)) {
 				ListaCircularDoble lista= Stores.Extraer(store);
@@ -75,7 +96,11 @@ package Controller;
 			}
 		}
 		
-		
+		/**
+		 * Metodo que crea el archivo que actuara como documento dentro de la carpeta especificada
+		 * @param name
+		 * @param Store
+		 */
 		public void CrearDocumento(String name, String Store){
 			System.out.println("Data\\"+Store+"\\"+name+"\\");
 			File fichero = new File ("Data\\"+Store+"\\"+name+"\\");
@@ -96,6 +121,16 @@ package Controller;
 		}
 		
 		
+		/**
+		 * metodo que crea el objeto tipo JSON
+		 * @param name
+		 * @param tipo
+		 * @param llave
+		 * @param requerido
+		 * @param valor
+		 * @param documento
+		 * @param store
+		 */
 		public  void NuevoObjeto(String name, String tipo, String llave, boolean requerido, Object valor, String documento, String store) {
 			JSONObject obj = new JSONObject();
 			obj.put("name", name);
@@ -123,7 +158,12 @@ package Controller;
 			
 		}
 		
-		
+		/**
+		 * Metodo que añade el objeto a la lista simple del documento respectivo
+		 * @param doc
+		 * @param store
+		 * @param objeto
+		 */
 		private void AddObjetos( String doc,String store, JSONObject objeto) {
 			if(Stores.buscar(store)) {
 				ListaCircularDoble lista= Stores.Extraer(store);

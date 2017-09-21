@@ -1,6 +1,9 @@
 package Herramientas;
 
 public class ListaCircularDoble {
+	/**
+	 * atributos de la lista, nodos hacia ambas direcciones, tamaño y nombre
+	 */
 		
 		NodoCD inicio;
 		NodoCD fin;
@@ -8,7 +11,10 @@ public class ListaCircularDoble {
 		String name;
 		
 		
-		
+		/**
+		 * Inicializa los valores de la lista
+		 * @param name
+		 */
 		public ListaCircularDoble(String name) {
 			this.inicio = null;
 			this.fin = null;
@@ -16,7 +22,10 @@ public class ListaCircularDoble {
 			this.name = name;
 		}
 		
-		
+		/**
+		 * 
+		 * Metodos para obtener y modificar los atributos de la lista
+		 */
 		public NodoCD getInicio() {
 			return inicio;
 		}
@@ -42,7 +51,10 @@ public class ListaCircularDoble {
 			this.name = name;
 		}
 		
-		
+		/**
+		 * Metodo que inserta al final de la lista un nuevo nodo
+		 * @param valor
+		 */
 		public void InsertarAlFinal(ListaSimpleEnlazada valor) {
 			NodoCD nuevo= new NodoCD(valor);
 			nuevo.setValor(valor);
@@ -62,7 +74,11 @@ public class ListaCircularDoble {
 		}
 		
 		
-		
+		/**
+		 * Indica si existe un elemento en especifico dentro de la lista
+		 * @param referencia
+		 * @return encontrado
+		 */
 		public boolean buscar(String referencia){
 			NodoCD aux = inicio;
 			boolean encontrado = false;
@@ -78,7 +94,11 @@ public class ListaCircularDoble {
 		}
 		
 		
-		
+		/**
+		 * retorna el elemnto que se busca dentro de la lista
+		 * @param valor
+		 * @return ListaSimpleEnlazada 
+		 */
 		public ListaSimpleEnlazada Extraer(String valor) {
 			NodoCD actual= fin;
 			boolean encontrado= false;

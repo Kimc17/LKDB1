@@ -13,8 +13,11 @@ import Herramientas.NodoCD;
 import Herramientas.NodoDoble;
 
 public class Commit{
-
-
+/**
+ * Extrae los datos de la lista enlazada que contiene todas las otras listas y lo transiere a un archivo JSON
+ * @param lista
+ * 
+ */
 
 	public JSONObject GuardarDatos(ListaDobleEnlazada lista) {
 		int cont=0;

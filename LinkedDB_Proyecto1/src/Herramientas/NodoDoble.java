@@ -1,14 +1,19 @@
 package Herramientas;
 
 public class NodoDoble  {
-
+	/**
+	 * Atributos del nodo, nombre y referencias
+	 */
 	String name;
 	ListaCircularDoble valor;
 	private NodoDoble  siguiente;
 	private NodoDoble  anterior;
 	
 	
-	
+	/**
+	 * Inicialia los valores de los atributos
+	 * @param valor
+	 */
 	public NodoDoble(ListaCircularDoble valor) {
 		this.name = valor.getName();
 		this.valor = valor;
@@ -17,7 +22,10 @@ public class NodoDoble  {
 	}
 
 
-
+	/**
+	   * metodos que retornan o modifican los valores del nodo 
+	   * 
+	   */
 	public NodoDoble getSiguiente() {
 		return siguiente;
 	}

@@ -4,11 +4,16 @@ import Herramientas.ListaCircularDoble;
 import Herramientas.NodoDoble;
 
 public class ListaDobleEnlazada {
-
+	/**
+	 * atributos de la lista, nodos hacia ambas direcciones, tamaño y nombre
+	 */
 	String name;
 	NodoDoble inicio;
 	
-	
+	/**
+	 * Inicializa los valores de la lista
+	 * @param name
+	 */
 	public ListaDobleEnlazada(String name) {
 		this.name = name;
 		this.size=0;
@@ -16,7 +21,10 @@ public class ListaDobleEnlazada {
 		fin= null;
 	}
 	
-	
+	/**
+	 * 
+	 * Metodos para obtener y modificar los atributos de la lista
+	 */
 	
 	public String getName() {
 		return name;
@@ -64,12 +72,21 @@ public class ListaDobleEnlazada {
 
 	
 	
-	
+	/**
+	 * Indica si la lista esta vacia
+	 * @return boolean
+	 */
 	
 	public boolean esVacia(){
 		return inicio == null;
 	}
 	
+	
+	
+	/**
+	 * Metodo que inserta al final de la lista un nuevo nodo
+	 * @param valor
+	 */
 	public void agregarAlFinal(ListaCircularDoble valor){
 
 		NodoDoble nuevo = new NodoDoble(valor);
@@ -94,6 +111,12 @@ public class ListaDobleEnlazada {
 	
 	
 	
+	/**
+	 * Indica si existe un elemento en especifico dentro de la lista
+	 * @param referencia
+	 * @return encontrado
+	 */
+	
 	public boolean buscar(String referencia){
 		NodoDoble aux = inicio;
 		boolean encontrado = false;
@@ -109,7 +132,11 @@ public class ListaDobleEnlazada {
 	}
 	
 	
-	
+	/**
+	 * retorna el elemnto que se busca dentro de la lista
+	 * @param referencia
+	 * @return ListaCircularDoble
+	 */
 	public ListaCircularDoble Extraer(String referencia){
 		NodoDoble aux = inicio;
 		boolean encontrado = false;

@@ -3,11 +3,17 @@ package Herramientas;
 import org.json.simple.JSONObject;
 
 public class ListaSimpleEnlazada {
+	/**
+	 * atributos de la lista, nodos hacia ambas direcciones, tamaño y nombre
+	 */
 	private Nodo inicio;
 	private int size;
 	private String name;
 	
-	
+	/**
+	 * Inicializa los valores de la lista
+	 * @param name
+	 */
 	
 	public ListaSimpleEnlazada( String name) {
 		super();
@@ -16,7 +22,10 @@ public class ListaSimpleEnlazada {
 		this.name= name;
 	}
 	
-	
+	/**
+	 * 
+	 * Metodos para obtener y modificar los atributos de la lista
+	 */
 	
 	public Nodo getInicio() {
 		return inicio;
@@ -69,7 +78,11 @@ public class ListaSimpleEnlazada {
 	
 	
 	
-	
+	/**
+	 * Indica si existe un elemento en especifico dentro de la lista
+	 * @param referencia
+	 * @return encontrado
+	 */
 	public boolean buscar(String referencia){
 		Nodo aux = inicio;
 		boolean encontrado = false;
@@ -85,7 +98,11 @@ public class ListaSimpleEnlazada {
 	}
 	
 	
-	
+	/**
+	 * retorna el elemnto que se busca dentro de la lista
+	 * @param referencia
+	 * @return Object
+	 */
 	public Object Extraer(String referencia){
 		Nodo aux = inicio;
 		boolean encontrado = false;

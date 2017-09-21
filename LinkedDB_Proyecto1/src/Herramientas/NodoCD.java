@@ -1,12 +1,17 @@
 package Herramientas;
 
 public class NodoCD {
-
+	/**
+	 * Atributos del nodo, nombre y referencias
+	 */
 	NodoCD siguiente;
 	NodoCD anterior;
 	ListaSimpleEnlazada valor;
 	String name;
-	
+	/**
+	 * Inicialia los valores de los atributos
+	 * @param valor
+	 */
 	public NodoCD( ListaSimpleEnlazada valor) {
 		this.siguiente = null;
 		this.anterior = null;
@@ -14,7 +19,10 @@ public class NodoCD {
 		this.name = valor.getName();
 	}
 	
-
+	/**
+	   * metodos que retornan o modifican los valores del nodo 
+	   * 
+	   */
 
 	public NodoCD getSiguiente() {
 		return siguiente;
